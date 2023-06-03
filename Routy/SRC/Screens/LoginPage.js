@@ -10,7 +10,7 @@ function LoginPage(props) {
     return (
         <SafeAreaView style={styles.body}>
             <View style={styles.header}>
-                <Text style={styles.header_text}>DIGITUS</Text>
+                <Text style={styles.header_text}>Fast Order</Text>
 
             </View>
 

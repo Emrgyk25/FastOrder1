@@ -62,7 +62,7 @@ const MainPage = (props) => {
         <View style={{ flex: 5 }}>
             <View style={style.header}><TouchableOpacity ><Icon name="search" size={25} style={style.header_icon} /></TouchableOpacity>
 
-                <Text style={style.header_title}>Digitus</Text>
+                <Text style={style.header_title}>Fast Order</Text>
                 <Icon name="user" size={25} style={style.header_icon} />
             </View>
             <StoryList />
@@ -102,7 +102,7 @@ const style = StyleSheet.create({
         color: 'black',
     },
     header_icon: {
-        paddingHorizontal: 10,
+        paddingHorizontal: 2,
     },
 
 
