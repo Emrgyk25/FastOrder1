@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { Text, View, SafeAreaView, TextInput, TouchableOpacity } from 'react-native';
+import { Text, View, SafeAreaView, TextInput, TouchableOpacity, Image } from 'react-native';
 import styles from './Styles/Login.styles';
 
 function LoginPage(props) {
@@ -10,7 +10,10 @@ function LoginPage(props) {
     return (
         <SafeAreaView style={styles.body}>
             <View style={styles.header}>
-                <Text style={styles.header_text}>Fast Order</Text>
+                <Image
+                    source={require('../Assets/fast.png')}
+                    style={styles.image}
+                />
 
             </View>
 

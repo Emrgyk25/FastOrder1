@@ -27,7 +27,7 @@ const offset = 50;
 const radius = 30;
 const styles = StyleSheet.create({
     container: {
-        width: deviceWidth - 20,
+        width: deviceWidth - 5,
         alignItems: 'center',
         marginTop: 30,
     },

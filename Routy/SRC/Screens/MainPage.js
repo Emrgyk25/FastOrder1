@@ -1,51 +1,48 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable prettier/prettier */
-/* eslint-disable no-shadow */
-/* eslint-disable prettier/prettier */
-/* eslint-disable eol-last */
-/* eslint-disable prettier/prettier */
+
 import React from 'react';
 import {
     Text, View,
     StyleSheet,
     FlatList,
     TouchableOpacity,
+    TouchableWithoutFeedback,
+    Image,
 } from 'react-native';
 
-import Navbar from '../Items/Navbar';
+
 import StoryList from '../Items/StoryList';
 import Card from '../Items/Card';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 
 const CardData = [
     {
-        name: 'Merhaba',
+        name: 'Burger',
         categories: 'Bakery',
         image: require('../Assets/xd.jpg'),
         id: 1,
     },
     {
-        name: 'Merhaba',
+        name: 'Doner',
         categories: 'Bakery',
         image: require('../Assets/xd.jpg'),
         id: 2,
     },
     {
-        name: 'Merhaba',
+        name: 'Kebab',
         categories: 'Bakery',
         image: require('../Assets/xd.jpg'),
         id: 3,
     },
     {
-        name: '4.',
+        name: 'Manti',
         categories: 'Bakery',
         image: require('../Assets/xd.jpg'),
         id: 4,
     },
     {
-        name: '5.',
+        name: 'Tatli',
         categories: 'Bakery',
         image: require('../Assets/xd.jpg'),
         id: 5,
@@ -54,19 +51,31 @@ const CardData = [
 ];
 
 
-const MainPage = (props) => {
+const handleProductSelect = ({ navigation, onPress1 }) => {
+    navigation.navigate("Details")
+}
+
+const MainPage = (props, onPress) => {
     function navigateToPage() {
-        props.navigation.navigate('Settings');
+        props.navigation.navigate('Profile');
     }
     return (
-        <View style={{ flex: 5 }}>
-            <View style={style.header}><TouchableOpacity ><Icon name="search" size={25} style={style.header_icon} /></TouchableOpacity>
+        <View style={{ flex: 5, }}>
+            <View style={style.header}>
+                <TouchableOpacity ><Icon name="magnify" size={35} style={style.header_icon} />
+                </TouchableOpacity>
+                <Image
+                    source={require('../Assets/fast.png')}
+                    style={style.image}
+                />
+                <TouchableOpacity onPress={navigateToPage} ><Icon name="account" size={35} style={style.header_icon2} />
+                </TouchableOpacity>
 
-                <Text style={style.header_title}>Fast Order</Text>
-                <Icon name="user" size={25} style={style.header_icon} />
+
             </View>
-            <StoryList />
-            <View style={{ flex: 100 }}>
+
+            <View style={{ flex: 100 }} >
+
                 <FlatList
                     data={CardData}
                     renderItem={({ item }) => {
@@ -75,10 +84,9 @@ const MainPage = (props) => {
                     keyExtractor={(CardData) => CardData.id.toString()}
                     showsVerticalScrollIndicator={true}
                 />
+
             </View>
-            <View style={{ flex: 10 }} >
-                <Navbar onPress={navigateToPage} />
-            </View>
+
         </View>
     );
 }
@@ -93,16 +101,20 @@ const style = StyleSheet.create({
         flex: 5,
         alignItems: 'center',
         justifyContent: 'center',
+
     },
-    header_title: {
-        paddingHorizontal: 130,
-        alignItems: 'center',
-        fontSize: 25,
-        fontWeight: '900',
-        color: 'black',
+    image: {
+        width: 250,
+        height: 50,
+        marginLeft: 50
+
+
     },
     header_icon: {
-        paddingHorizontal: 2,
+        paddingHorizontal: 0,
+    },
+    header_icon2: {
+        marginLeft: 40,
     },
 
 

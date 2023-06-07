@@ -12,10 +12,10 @@ const SplashScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Image
-                source={require('../Assets/xd2.jpg')}
+                source={require('../Assets/fast.png')}
                 style={styles.image}
             />
-            <Text style={styles.text}>Digitus</Text>
+            <Text style={styles.text}></Text>
         </View>
     );
 };
@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
 
     },
     image: {
-        width: 350,
-        height: 150,
+        width: 450,
+        height: 450,
     },
     text: {
         fontSize: 18,

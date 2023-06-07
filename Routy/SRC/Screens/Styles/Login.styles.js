@@ -83,6 +83,11 @@ export default StyleSheet.create({
         textDecorationLine: 'underline',
         color: '#FFB19D',
     },
+    image: {
+        width: 250,
+        height: 150,
+        marginLeft: 80
+    }
 
 });
 

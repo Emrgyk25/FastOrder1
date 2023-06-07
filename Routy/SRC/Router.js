@@ -10,7 +10,8 @@ import Splash from './Screens/Splash';
 import Information from './Screens/Information';
 import LoginPage from './Screens/LoginPage';
 import MainPage from './Screens/MainPage';
-import Settings from './Screens/Settings';
+import Profile from './Screens/Profile';
+import Details from './Screens/Details';
 
 
 const HomeStack = createNativeStackNavigator();
@@ -25,7 +26,8 @@ function App() {
                 <HomeStack.Screen name="Information" component={Information} />
                 <HomeStack.Screen name="Login Page" component={LoginPage} />
                 <HomeStack.Screen name="Main Page" component={MainPage} />
-                <HomeStack.Screen name="Settings" component={Settings} />
+                <HomeStack.Screen name="Profile" component={Profile} />
+                <HomeStack.Screen name="Details" component={Details} />
             </HomeStack.Navigator>
         </NavigationContainer>
     );
