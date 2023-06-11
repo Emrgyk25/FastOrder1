@@ -7,10 +7,8 @@ import {
     TouchableOpacity,
     TouchableWithoutFeedback,
     Image,
+    TouchableRipple
 } from 'react-native';
-
-
-import StoryList from '../Items/StoryList';
 import Card from '../Items/Card';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -22,6 +20,7 @@ const CardData = [
         categories: 'Bakery',
         image: require('../Assets/xd.jpg'),
         id: 1,
+
     },
     {
         name: 'Doner',
@@ -51,18 +50,15 @@ const CardData = [
 ];
 
 
-const handleProductSelect = ({ navigation, onPress1 }) => {
-    navigation.navigate("Details")
-}
-
-const MainPage = (props, onPress) => {
+const MainPage = (props) => {
     function navigateToPage() {
         props.navigation.navigate('Profile');
     }
+
     return (
         <View style={{ flex: 5, }}>
             <View style={style.header}>
-                <TouchableOpacity ><Icon name="magnify" size={35} style={style.header_icon} />
+                <TouchableOpacity  ><Icon name="magnify" size={35} style={style.header_icon} />
                 </TouchableOpacity>
                 <Image
                     source={require('../Assets/fast.png')}
