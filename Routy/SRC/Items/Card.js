@@ -1,26 +1,32 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable eol-last */
 /* eslint-disable prettier/prettier */
-import React from 'react';
-import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 
-
-
+import { View, Text, StyleSheet, Dimensions, Image, TouchableOpacity, TouchableWithoutFeedback } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import * as React from 'react';
 
 const Card = ({ info }) => {
     const { name, categories, image } = info;
+
+    const navigation = useNavigation();
     return (
         <View style={styles.container}>
-            <View style={styles.cardContainer}>
-                <Image style={styles.imageStyle} source={image} />
-                <View style={styles.infoStyle}>
-                    <Text style={styles.titleStyle}>{name}</Text>
-                    <Text style={styles.categoryStyle}>{categories}</Text>
+            <TouchableWithoutFeedback onPress={() => navigation.navigate('Details', { ...info })}  >
+                <View style={styles.cardContainer}>
+                    <Image style={styles.imageStyle} source={image} />
+                    <View style={styles.infoStyle}>
+                        <Text style={styles.titleStyle}>{name}</Text>
+                        <Text style={styles.categoryStyle}>{categories}</Text>
+                    </View>
                 </View>
-            </View>
+            </TouchableWithoutFeedback>
         </View>
+
     );
 };
+
+
 
 const deviceWidth = Math.round(Dimensions.get('window').width);
 const offset = 50;
@@ -30,6 +36,8 @@ const styles = StyleSheet.create({
         width: deviceWidth - 5,
         alignItems: 'center',
         marginTop: 30,
+
+
     },
     cardContainer: {
         width: deviceWidth - offset,

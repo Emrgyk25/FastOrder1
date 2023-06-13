@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable semi */
 /* eslint-disable prettier/prettier */
-import React from 'react';
+import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -12,6 +12,7 @@ import LoginPage from './Screens/LoginPage';
 import MainPage from './Screens/MainPage';
 import Profile from './Screens/Profile';
 import Details from './Screens/Details';
+import Card from './Items/Card';
 
 
 const HomeStack = createNativeStackNavigator();

@@ -62,7 +62,7 @@ const Profile = () => {
                     borderRightWidth: 1
                 }]}>
                     <Title>$150.50</Title>
-                    <Caption>Cuzdan</Caption>
+                    <Caption>Harcamalar</Caption>
                 </View>
                 <View style={styles.infoBox}>
                     <Title>12</Title>
@@ -72,7 +72,7 @@ const Profile = () => {
 
             <View style={styles.menuWrapper}>
 
-                <TouchableRipple >
+                <TouchableRipple>
                     <View style={styles.menuItem}>
                         <Icon name="share-outline" color="#FF6347" size={25} />
                         <Text style={styles.menuItemText}>Arkdaslarina gonder</Text>
@@ -86,7 +86,7 @@ const Profile = () => {
                 </TouchableRipple>
                 <TouchableRipple onPress={() => { }}>
                     <View style={styles.menuItem}>
-                        <Icon name="settings-outline" color="#FF6347" size={25} />
+                        <Icon name="cog" color="#FF6347" size={25} />
                         <Text style={styles.menuItemText}>Ayarlar</Text>
                     </View>
                 </TouchableRipple>
