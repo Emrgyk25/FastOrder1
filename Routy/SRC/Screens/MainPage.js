@@ -18,31 +18,36 @@ const CardData = [
     {
         name: 'Burger',
         categories: 'Bakery',
-        image: require('../Assets/xd.jpg'),
+        location: 'Buyukcekmece',
+        image: require('../Assets/rj04-hero.jpg'),
         id: 1,
 
     },
     {
         name: 'Doner',
         categories: 'Bakery',
+        location: 'Atasehir',
         image: require('../Assets/xd.jpg'),
         id: 2,
     },
     {
         name: 'Kebab',
         categories: 'Bakery',
+        location: 'Beylikduzu',
         image: require('../Assets/xd.jpg'),
         id: 3,
     },
     {
         name: 'Manti',
         categories: 'Bakery',
+        location: 'Besiktas',
         image: require('../Assets/xd.jpg'),
         id: 4,
     },
     {
         name: 'Tatli',
         categories: 'Bakery',
+        location: 'Kadikoy',
         image: require('../Assets/xd.jpg'),
         id: 5,
     },
