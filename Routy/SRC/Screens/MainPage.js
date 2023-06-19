@@ -11,8 +11,7 @@ import {
 } from 'react-native';
 import Card from '../Items/Card';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-
-
+import {getRestaurants} from '../plugins/firebase.js'
 
 const CardData = [
     {
@@ -51,9 +50,12 @@ const CardData = [
         image: require('../Assets/xd.jpg'),
         id: 5,
     },
-
 ];
-
+const [CardData, setData] = useState(null);
+useEffect(async () => {
+    const data = await getRestaurants()
+    setData(data)
+}, [])
 
 const MainPage = (props) => {
     function navigateToPage() {
